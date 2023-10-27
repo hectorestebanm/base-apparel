@@ -12,34 +12,41 @@
 </head>
 <body>
     <main class="main-container">
+        <!-- Bloque del Logo -->
         <div class="container-logo">
             <img src="images/logo.svg" alt="Logo">
         </div>
+        <!-- Bloque del hero respecto al ancho de la página -->
         <div class="container-hero">
             <picture>
                 <source media="(min-width:768px)" srcset="images/hero-desktop.jpg">
                 <img src="images/hero-mobile.jpg" alt="Hero" style="width:100%; height:100%">
             </picture>
         </div>
+        <!-- Bloque que contiene la información del form -->
         <div class="container-form">
             <h1>We're <span>coming soon</span></h1>
             <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
             <div class="input">
+                <!-- input para ingresar la dirección de correo -->
                 <input class="input__mail" type="text" placeholder="Email Address">
+                <!-- Icono de error de correo -->
                 <div class="input__error">
                     <img src="images/icon-error.svg" alt="error">
                 </div>
+                <!-- Botón de confirmación de correo -->
                 <div class="input__arrow">
                     <input class="input__btn" type="image" src="images/icon-arrow.svg" alt="arrow">
                 </div>
             </div>
-            <!-- <button>Email Address <img class="error" src="images/icon-error.svg" alt="error"> <img src="images/icon-arrow.svg" alt="arrow"></button> -->
+            <!-- Bloque con mensaje de error ante dirección de correo no válida -->
             <div class="valido">
                 <p class="text__invalid">Please provide a valid email</p>
             </div>        
         </div>
     </main>
 
+    <!-- Pie de página -->
     <footer>
         <p class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

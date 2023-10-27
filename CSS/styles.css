@@ -1,16 +1,13 @@
+/* Variables usadas en la página */
 :root
 {
     --Desaturated-Red: hsl(0, 36%, 70%);
     --Soft-Red: hsl(0, 93%, 68%);
     --Dark-Grayish-Red: hsl(0, 6%, 24%);
-/* ### Gradients
-
---Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
---Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
---Linear-1: #ffffff;
---Linear-2: #fff5f5;
---Linear-3: #f8bfbf;
---Linear-4: #ee8c8c;
+    --Linear-1: #ffffff;
+    --Linear-2: #fff5f5;
+    --Linear-3: #f8bfbf;
+    --Linear-4: #ee8c8c;
 }
 
 *
@@ -30,37 +27,6 @@ body
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,245,245,1) 100%);
     width: 375px;
     margin: 0 auto;
-}
-
-@media screen and (min-width: 768px)
-{
-    body
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    .main-container
-    {
-        background-image: url(../images/bg-pattern-desktop.svg);
-        background-size: contain;
-        width: 740px;
-        display: grid;
-        grid-template-columns: 430px 310px;
-    }
-    .container-hero
-    {
-        grid-column: 2/3;
-        grid-row: 1/3;
-    }
-    .container-form
-    {
-        padding: 28px!important;
-        text-align: left!important;
-        margin-bottom: 20px;
-    }
 }
 
 .container-logo
@@ -141,7 +107,6 @@ body
 
 .container-form .valido p
 {
-    /* display: none; */
     color: var(--Soft-Red);
     text-align: left;
     margin-left: 15px;
@@ -168,7 +133,6 @@ input::placeholder
     padding: 16px;
     color: var(--Desaturated-Red);
     border: 1px solid var(--Desaturated-Red);
-    /* border: none; */
     border-radius: 25px;
 }
 
@@ -200,4 +164,38 @@ input::placeholder
 .attribution a
 {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px)
+{
+    /* Centrado del container en pantallas mayores a 768px */
+    body
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    /* Display grid para pantallas mayores a 768px del container */
+    .main-container
+    {
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-size: contain;
+        width: 740px;
+        display: grid;
+        grid-template-columns: 430px 310px;
+    }
+    /* Alineación de la grilla para que quede ordenada la imagen a la derecha*/
+    .container-hero
+    {
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+    .container-form
+    {
+        padding: 28px!important;
+        text-align: left!important;
+        margin-bottom: 20px;
+    }
 }
